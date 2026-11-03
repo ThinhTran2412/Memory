@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Bức Thư Tình</title>
+    <link rel="icon" type="image/x-icon" href="https://i.loli.net/2021/06/03/lFg2V4WUcmkB98G.png">
+    <meta name="language" content="vi">
+    <meta name="title" content="Bức Thư Tình">
+    <meta name="describe" content="Một bức thư tình ngọt ngào gửi gắm đến người con gái anh yêu">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="theme-color" content="#ffc0cb">
+    <link type="text/css" rel="stylesheet" href="./Love_files/default.css">
+    <script type="text/javascript" src="./Love_files/jquery.min.js"></script>
+    <script type="text/javascript" src="./Love_files/jscex.min.js"></script>
+    <script type="text/javascript" src="./Love_files/jscex-parser.js"></script>
+    <script type="text/javascript" src="./Love_files/jscex-jit.js"></script>
+    <script type="text/javascript" src="./Love_files/jscex-builderbase.min.js"></script>
+    <script type="text/javascript" src="./Love_files/jscex-async.min.js"></script>
+    <script type="text/javascript" src="./Love_files/jscex-async-powerpack.min.js"></script>
+    <script type="text/javascript" src="./Love_files/functions.js" charset="utf-8"></script>
+    <script type="text/javascript" src="./Love_files/love.js" charset="utf-8"></script>
+
+</head>
+
+<body>
+    <!-- NÚT BẬT / TẮT NHẠC NỔI GÓC PHẢI -->
+    <div id="music-btn" class="music-btn" title="Bật / Tắt Nhạc">
+        <span class="music-icon">🎵</span>
+    </div>
+
+    <div id="main">
+        <div id="error">Trình duyệt của bạn hiện không hỗ trợ hiệu ứng này, vui lòng sử dụng <a
+                href="https://www.google.com/chrome/">Google Chrome</a> hoặc <a
+                href="https://www.mozilla.org/firefox/">Firefox</a> nhé!</div>
+        <div id="tree-container">
+            <!-- PHẦN 1: BẦU TRỜI - THƯ TÌNH TỰ ĐỘNG GÕ MÁY CHỮ -->
+            <div id="text">
+                <div id="code">
+                    <span class="say poem-title">Gửi Em, Người Anh Yêu ❤️</span><br><br>
+                    <span class="say">Chẳng cần cả thế giới bao la,</span><br>
+                    <span class="say">Chỉ cần một góc nhỏ có nụ cười của em.</span><br>
+                    <span class="say">Nguyện cùng em đi qua năm tháng,</span><br>
+                    <span class="say">Yêu em trọn vẹn đến mai sau...</span>
+                </div>
+            </div>
+
+            <!-- PHẦN 2: Ở GIỮA - CÂY HOA TÌNH YÊU TRÁI TIM -->
+            <div id="wrap-scaler">
+                <div id="wrap">
+                    <canvas id="canvas" width="1100" height="680"></canvas>
+                </div>
+            </div>
+
+            <!-- PHẦN 3: DƯỚI GỐC CÂY - ĐỒNG HỒ ĐẾM NGÀY BÊN NHAU -->
+            <div id="clock-box">
+                <div class="clock-title"><span class="names">Anh</span> và <span class="names">Em</span> đã bên nhau
+                    được ❤️</div>
+                <div id="clock"></div>
+            </div>
+
+            <!-- GỢI Ý VUỐT XUỐNG KHI XEM XONG MÀN 1 -->
+            <div id="scroll-hint" class="scroll-hint"
+                onclick="document.getElementById('heart-gallery-section').scrollIntoView({ behavior: 'smooth' })">
+                <div class="scroll-hint-text">Vuốt xuống để xem tiếp ❤️</div>
+                <div class="scroll-hint-arrow">⌄</div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- PHẦN TRÁI TIM GHÉP TỪ 55 ẢNH KỶ NIỆM (KHÔNG CHIẾU SLIDE) -->
+    <div id="heart-gallery-section">
+        <div class="heart-grid-wrapper">
+            <!-- Cột 1 (2 ảnh) -->
+            <div class="heart-col heart-col-1">
+                <div class="heart-card" data-idx="1" title="Khoảnh khắc 1">
+                    <img src="my_photos/14915.jpg" alt="Ảnh 1" loading="lazy">
+                    <div class="card-glow"></div>
+                </div>
+                <div class="heart-card" data-idx="2" title="Khoảnh khắc 2">
+                    <img src="my_photos/319280.jpg" alt="Ảnh 2" loading="lazy">
+                    <div class="card-glow"></div>
+                </div>
+            </div>
+
+            <!-- Cột 2 (4 ảnh) -->
+            <div class="heart-col heart-col-2">
+                <div class="heart-card" data-idx="3" title="Khoảnh khắc 3">
+                    <img src="my_photos/iali0.jpg" alt="Ảnh 3" loading="lazy">
+                    <div class="card-glow"></div>
+                </div>
+                <div class="heart-card" data-idx="4" title="Khoảnh khắc 4">
+                    <img src="my_photos/iali10.gif" alt="Ảnh 4" loading="lazy">
+                    <div class="card-glow"></div>
+                </div>
+                <div class="heart-card" data-idx="5" title="Khoảnh khắc 5">
+                    <img src="my_photos/iali11.jpg" alt="Ảnh 5" loading="lazy">
+                    <div class="card-glow"></div>
+                </div>
+                <div class="heart-card" data-idx="6" title="Khoảnh khắc 6">
+                    <img src="my_photos/iali12.jpg" alt="Ảnh 6" loading="lazy">
+                    <div class="card-glow"></div>
+                </div>
+            </div>
+
+            <!-- Cột 3 (5 ảnh) -->
+            <div class="heart-col heart-col-3">
+                <div class="heart-card" data-idx="7" title="Khoảnh khắc 7">
+                    <img src="my_photos/iali14.jpg" alt="Ảnh 7" loading="lazy">
+                    <div class="card-glow"></div>
+                </div>
+                <div class="heart-card" data-idx="8" title="Khoảnh khắc 8">
+                    <img src="my_photos/iali16.jpg" alt="Ảnh 8" loading="lazy">
+                    <div class="card-glow"></div>
+                </div>
+                <div class="heart-card" data-idx="9" title="Khoảnh khắc 9">
+                    <img src="my_photos/iali18.jpg" alt="Ảnh 9" loading="lazy">
+                    <div class="card-glow"></div>
+                </div>
+                <div class="heart-card" data-idx="10" title="Khoảnh khắc 10">
+                    <img src="my_photos/iali19.jpg" alt="Ảnh 10" loading="lazy">
+                    <div class="card-glow"></div>
+                </div>
+                <div class="heart-card" data-idx="11" title="Khoảnh khắc 11">
+                    <img src="my_photos/iali2.jpg" alt="Ảnh 11" loading="lazy">
+                    <div class="card-glow"></div>
+                </div>
+            </div>
+
+            <!-- Cột 4 (5 ảnh - Trục chính giữa) -->
+            <div class="heart-col heart-col-4">
+                <div class="heart-card" data-idx="12" title="Khoảnh khắc 12">
+                    <img src="my_photos/iali20.jpg" alt="Ảnh 12" loading="lazy">
+                    <div class="card-glow"></div>
+                </div>
+                <div class="heart-card" data-idx="13" title="Khoảnh khắc 13">
+                    <img src="my_photos/iali21.jpg" alt="Ảnh 13" loading="lazy">
+                    <div class="card-glow"></div>
+                </div>
+                <div class="heart-card" data-idx="14" title="Khoảnh khắc 14">
+                    <img src="my_photos/iali22.jpg" alt="Ảnh 14" loading="lazy">
+                    <div class="card-glow"></div>
+                </div>
+                <div class="heart-card" data-idx="15" title="Khoảnh khắc 15">
+                    <img src="my_photos/iali22_bg.jpg" alt="Ảnh 15" loading="lazy">
+                    <div class="card-glow"></div>
+                </div>
+                <div class="heart-card" data-idx="16" title="Khoảnh khắc 16">
+                    <img src="my_photos/iali24.jpg" alt="Ảnh 16" loading="lazy">
+                    <div class="card-glow"></div>
+                </div>
+            </div>
+
+            <!-- Cột 5 (5 ảnh) -->
+            <div class="heart-col heart-col-5">
+                <div class="heart-card" data-idx="17" title="Khoảnh khắc 17">
+                    <img src="my_photos/iali25.jpg" alt="Ảnh 17" loading="lazy">
+                    <div class="card-glow"></div>
+                </div>
+                <div class="heart-card" data-idx="18" title="Khoảnh khắc 18">
+                    <img src="my_photos/iali29.jpg" alt="Ảnh 18" loading="lazy">
+                    <div class="card-glow"></div>
+                </div>
+                <div class="heart-card" data-idx="19" title="Khoảnh khắc 19">
+                    <img src="my_photos/iali2_bg.jpg" alt="Ảnh 19" loading="lazy">
+                    <div class="card-glow"></div>
+                </div>
+                <div class="heart-card" data-idx="20" title="Khoảnh khắc 20">
+                    <img src="my_photos/iali3.jpg" alt="Ảnh 20" loading="lazy">
+                    <div class="card-glow"></div>
+                </div>
+                <div class="heart-card" data-idx="21" title="Khoảnh khắc 21">
+                    <img src="my_photos/iali30_1.jpg" alt="Ảnh 21" loading="lazy">
+                    <div class="card-glow"></div>
+                </div>
+            </div>
+
+            <!-- Cột 6 (4 ảnh) -->
+            <div class="heart-col heart-col-6">
+                <div class="heart-card" data-idx="22" title="Khoảnh khắc 22">
+                    <img src="my_photos/iali30_2.jpg" alt="Ảnh 22" loading="lazy">
+                    <div class="card-glow"></div>
+                </div>
+                <div class="heart-card" data-idx="23" title="Khoảnh khắc 23">
+                    <img src="my_photos/iali31.jpg" alt="Ảnh 23" loading="lazy">
+                    <div class="card-glow"></div>
+                </div>
+                <div class="heart-card" data-idx="24" title="Khoảnh khắc 24">
+                    <img src="my_photos/iali32.jpg" alt="Ảnh 24" loading="lazy">
+                    <div class="card-glow"></div>
+                </div>
+                <div class="heart-card" data-idx="25" title="Khoảnh khắc 25">
+                    <img src="my_photos/iali35.jpg" alt="Ảnh 25" loading="lazy">
+                    <div class="card-glow"></div>
+                </div>
+            </div>
+
+            <!-- Cột 7 (2 ảnh) -->
+            <div class="heart-col heart-col-7">
+                <div class="heart-card" data-idx="26" title="Khoảnh khắc 26">
+                    <img src="my_photos/iali37.jpg" alt="Ảnh 26" loading="lazy">
+                    <div class="card-glow"></div>
+                </div>
+                <div class="heart-card" data-idx="27" title="Khoảnh khắc 27">
+                    <img src="my_photos/iali4.jpg" alt="Ảnh 27" loading="lazy">
+                    <div class="card-glow"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- NÚT CHỌN NHANH 27 ẢNH TỪ MÁY -->
+        <div class="gallery-tools">
+            <label class="btn-upload-photos" for="photo-upload-input" title="Chọn cùng lúc 27 ảnh bất kỳ từ máy của bạn">
+                📷 Chọn 27 ảnh của bạn (Không cần đổi tên)
+            </label>
+            <input type="file" id="photo-upload-input" multiple accept="image/*" style="display:none;">
+        </div>
+    </div>
+
+    <!-- LIGHTBOX PHÓNG TO ẢNH -->
+    <div id="photo-lightbox">
+        <span id="lightbox-close">&times;</span>
+        <img id="lightbox-img" src="" alt="Ảnh phóng to">
+        <div id="lightbox-caption"></div>
+    </div>
+
+    <audio preload="auto" autoplay="" id="media" src="love.mp3" autoplay preload loop="loop"></audio>
+
+    <script type="text/javascript" src="./Love_files/tree-app.js" charset="utf-8"></script>
+    <script type="text/javascript" src="./Love_files/gallery.js" charset="utf-8"></script>
+</body>
+
+</html>
