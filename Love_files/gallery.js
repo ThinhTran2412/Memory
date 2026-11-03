@@ -165,13 +165,9 @@
         }, 4500); // Cứ mỗi 4.5 giây đổi nhẹ 1 ảnh
     }
 
-    // Khởi tạo: Mở DB -> Xáo trộn ngẫu nhiên lần đầu (Refresh F5) -> Bật Auto-Swap
-    openDB(function () {
-        loadUploadedPhotos(function () {
-            applyRandomPhotos(false);
-            startLiveAutoSwap();
-        });
-    });
+    // Khởi tạo: Xáo trộn ngẫu nhiên 27 ảnh từ kho my_photos mỗi lần F5 -> Bật Live Auto-Swap
+    applyRandomPhotos(false);
+    startLiveAutoSwap();
 
     // ========================================================
     // NÚT ĐỔI ẢNH NGẪU NHIÊN BẰNG TAY (SHUFFLE BUTTON)

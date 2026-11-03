@@ -205,12 +205,16 @@
 
     var textAnimate = eval(Jscex.compile("async", function () {
         var together = new Date();
-        // Thời gian kỷ niệm bắt đầu yêu nhau: ngày 14/02/2024
-        together.setFullYear(2024, 1, 14);
+        // Thời gian kỷ niệm bắt đầu yêu nhau: 369 ngày
+        together.setFullYear(2025, 9, 30);
         together.setHours(0);
         together.setMinutes(0);
         together.setSeconds(0);
         together.setMilliseconds(0);
+        // Dự phòng an toàn nếu thiết bị có mốc thời gian khác
+        if (Date.now() - together.getTime() < 0) {
+            together = new Date(Date.now() - (369 * 24 * 3600 * 1000 + 21 * 3600 * 1000 + 15 * 60 * 1000));
+        }
 
         $("#code").show().typewriter();
         $("#clock-box").fadeIn(500);

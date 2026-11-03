@@ -10,10 +10,12 @@ if (!fs.existsSync(photoDir)) {
     process.exit(1);
 }
 
-// Lấy tất cả các file ảnh trong my_photos
+// Lấy tất cả các file ảnh trong my_photos (loại trừ icon hệ thống)
 const allowedExts = ['.jpg', '.jpeg', '.png', '.gif', '.webp', '.bmp', '.heic', '.jfif'];
 const files = fs.readdirSync(photoDir).filter(f => {
     const ext = path.extname(f).toLowerCase();
+    const base = path.basename(f, ext).toLowerCase();
+    if (base === 'music' || base === 'mute') return false;
     return allowedExts.includes(ext);
 });
 
