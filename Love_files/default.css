@@ -537,30 +537,48 @@ a {
     }
 }
 
-/* Nút chọn nhanh ảnh */
-.gallery-tools {
-    margin-top: 25px;
-    margin-bottom: 20px;
-    text-align: center;
-    z-index: 20;
+/* Animation đổi ảnh lật 3D nhẹ nhàng */
+.card-swap-anim {
+    transform: scale(0.85) rotateY(90deg);
+    opacity: 0.15;
+    transition: transform 0.28s ease, opacity 0.28s ease;
 }
 
-.btn-upload-photos {
-    display: inline-block;
+/* Thanh công cụ album ảnh */
+.gallery-tools {
+    margin-top: 25px;
+    margin-bottom: 25px;
+    text-align: center;
+    z-index: 20;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+    padding: 0 10px;
+}
+
+.btn-tool, .btn-upload-photos {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
     background: rgba(255, 255, 255, 0.92);
     color: #e91e63;
     font-size: 13.5px;
     font-weight: 600;
-    padding: 9px 22px;
+    padding: 9px 20px;
     border-radius: 25px;
     border: 1.5px solid rgba(233, 30, 99, 0.35);
-    box-shadow: 0 4px 15px rgba(233, 30, 99, 0.2);
+    box-shadow: 0 4px 15px rgba(233, 30, 99, 0.18);
     cursor: pointer;
-    transition: all 0.25s ease;
+    transition: all 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     user-select: none;
     -webkit-user-select: none;
+    outline: none;
+    font-family: inherit;
 }
 
+.btn-tool:hover, .btn-tool:active,
 .btn-upload-photos:hover, .btn-upload-photos:active {
     background: #ff4081;
     color: #fff;
